@@ -7,4 +7,4 @@
 
 # Pour Instaler mon Projet :
 
-1. git clone : ;
+5. git clone : https://github.com/AdnanElg/Project-4-Game-One.git ;
