@@ -1,4 +1,5 @@
 
+        
         //Déclaration de mes variables first et firstNameError :
         let firstName = document.querySelector("#first");
         let firstNameError = document.querySelector("#firstNameError");
@@ -168,37 +169,27 @@
         //Déclaration de mes constantes quantity et quantityError :
         let quantity = document.querySelector("#quantity");
         let quantityError = document.querySelector("#quantityError");
-                
-
 
         //Condition regex pour le contrôle du champs quantity :
         function quantityControle () {     
                     
-            if (quantity.value === 0 || quantity.value < 0) {
-                quantity.style.border = "solid 2px red";
-                quantityError.textContent = "Merci d'indiquer le nombre de tournois";
-                quantityError.style.fontSize = '15px';
-                quantityError.style.marginBottom = '10px';
-                quantityError.style.color = 'red';
-                return false;
-            }
-            
-            else if (quantity.value > 50) {
-                quantity.style.border = "solid 2px red";
-                quantityError.textContent = "Nous n'avons pas organisé autant de tournois !";
-                quantityError.style.fontSize = '15px';
-                quantityError.style.marginBottom = '10px';
-                quantityError.style.color = 'red';
-                return false;
-            }
-                            
-            else {
+            if (quantity.value) {
                 quantity.style.border = "solid 2px green";
                 quantityError.textContent = "Champ Valide";
                 quantityError.style.color = "green";
                 quantityError.style.fontSize = "15px";
                 quantityError.style.marginBottom = '10px';
                 return true;
+            }
+            
+                            
+            else {
+                quantity.style.border = "solid 2px red";
+                quantityError.textContent = "Merci d'indiquer le nombre de tournois";
+                quantityError.style.fontSize = '15px';
+                quantityError.style.marginBottom = '10px';
+                quantityError.style.color = 'red';
+                return false;
             }
         }  
 
@@ -238,12 +229,12 @@
 
             }
 
-            checkLocation.style.border = "solid 2px red";
-            locationError.textContent = 'Champ Invalide';
+            locationError.textContent ='Champ Invalide';
             locationError.style.color = 'red';
-            locationError.style.marginBottom = '10px';
             locationError.style.fontSize = '15px';
+            locationError.style.marginBottom = '10px';
             return false;
+
           }
 
         
@@ -300,8 +291,6 @@
         });
 
 
+    
 
  
-        
-
-      
