@@ -173,7 +173,7 @@
         //Condition regex pour le contrôle du champs quantity :
         function quantityControle () {     
                     
-            if (quantity.value) {
+            if (quantity.value >= 0) {
                 quantity.style.border = "solid 2px green";
                 quantityError.textContent = "Champ Valide";
                 quantityError.style.color = "green";
